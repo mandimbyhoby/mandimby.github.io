@@ -1,0 +1,57 @@
+{% extends 'layouts/master.html' %}
+{% load static %}
+{% block titre %}
+Acceuil
+{% endblock titre %}
+
+
+{% block content %}
+            <div class="pub1" id="publicite">
+               
+                     <h1 id="titre1">work harder, get stronger</h1><br><br>
+                    <h1 id="titre22">easy with our <span id="gym">gym</span></h1>
+
+                    
+                        <a href="{% url 'schedules' %}"><button>BECOME A MEMBER</button></a>
+                    
+
+            </div>
+            <div class="presentation">
+                <h2>Choose <span id="program">Program</span></h2>
+                <p id="txt">Training Studio is free CSS template for gyms and
+                    fitness
+                    centers. You are allowed to use this layout for your
+                    business website.</p><br><br>
+                    <img src="{% static 'gymapp/image/line-dec.png' %}" alt="img" id="separate">
+
+            </div><br><br>
+
+            <div class="contenue">
+                {% for program in programs %}
+                <div class="{% if forloop.counter == 1 %}basicfit{% elif forloop.counter == 2 %}advenced{% elif forloop.counter == 3 %}new_gym{% elif forloop.counter == 4 %}yoga{% elif forloop.counter == 5 %}base_muscle{% elif forloop.counter == 6 %}building{% endif %}">
+                    <img src="{% static 'gymapp/image/features-first-icon.png' %}" alt="Icon {{ forloop.counter }}" id="img{{ forloop.counter }}">
+                    <div class="box{{ forloop.counter }}">
+                        <h4 id="{% if forloop.counter == 1 %}basic{% elif forloop.counter == 2 %}advan{% elif forloop.counter == 3 %}new{% elif forloop.counter == 4 %}new{% elif forloop.counter == 5 %}basic{% elif forloop.counter == 6 %}new{% endif %}">{{ program.title }}</h4>
+                        <p id="txt{{ forloop.counter }}">
+                            {% if forloop.counter == 1 %}
+                                Please do not re-distribute this template ZIP file on any template collection website. This is not allowed.
+                            {% elif forloop.counter == 2 %}
+                                You may want to browse through <a href="https://templatemo.com/tag/digital-marketing" id="template">Digital</a> or <a href="https://templatemo.com/tag/digital-marketing" id="template">Corporate</a> HTML CSS templates on our website.
+                            {% elif forloop.counter == 3 %}
+                                If you wish to support TemplateMo website via PayPal, please feel free to contact us. We appreciate it a lot.
+                            {% elif forloop.counter == 4 %}
+                                This template is built on Bootstrap v4.3.1 framework. It is easy to adapt the columns and sections.
+                            {% elif forloop.counter == 5 %}
+                                Credit goes to Pexels website for images and video background used in this HTML template.
+                            {% elif forloop.counter == 6 %}
+                                Suspendisse fringilla et nisi et mattis. Curabitur sed finibus nisi. Integer nibh sapien, vehicula et auctor.
+                            {% endif %}
+                        </p>
+                        <a href="#"> <span id="lien{{ forloop.counter }}">Discover More</span></a>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+{% endblock content %}
+            
+   
