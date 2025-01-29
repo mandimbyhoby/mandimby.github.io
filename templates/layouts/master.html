@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titre %}Titre par défaut{% endblock titre %}</title>
+    {% load static %}
+    
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'gymapp/styles/endrika.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'gymapp/styles/ctc.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'gymapp/styles/schedules_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'gymapp/styles/classes.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+
+    
+    <style>
+        @keyframes slideShow {
+            0% { background-image: url("{% static 'gymapp/image/lifting.jpg' %}"); }
+            25% { background-image: url("{% static 'gymapp/image/pexels-leonardho-1552242.jpg' %}"); }
+            50% { background-image: url("{% static 'gymapp/image/presse.jpg' %}"); }
+            75% { background-image: url("{% static 'gymapp/image/squat.jpg' %}"); }
+            100% { background-image: url("{% static 'gymapp/image/scottwebb-140955.jpg' %}"); }
+        }
+
+        footer {
+            background-image: url("{% static 'gymapp/image/cta-bg.jpg' %}");
+        }
+
+        .inscription {
+            background-image: url("{% static 'gymapp/image/contact-bg.jpg' %}");
+        }
+
+        /* Exemple d'application de l'animation */
+        .pub {
+            animation: slideShow 20s infinite;
+            height: 600px; /* Exemple de hauteur, ajustez selon vos besoins */
+            background-repeat: no-repeat;
+        }
+
+        main{
+            
+            background-image: url("{% static 'gymapp/image/schedule-bg.jpg' %}");
+            
+            
+         }
+    </style>
+      
+</head>
+<body>
+    {% include 'layouts/header.html' %}
+
+    <div class="content">
+        {% block content %}
+        <!-- Contenu dynamique ici -->
+        {% endblock content %}
+    </div>
+
+    {% include 'layouts/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,103 @@
+{% extends 'layouts/master.html' %}
+{% load static %}
+
+{% block title %}
+classes
+{% endblock title %}
+
+{% block content %}
+<div class="pub10" id="publicite">
+    <h1 id="titre111">work harder, get stronger</h1><br><br>
+    <h1 id="titre2">easy with our <span id="gym">gym</span></h1>
+
+    
+    <a href="{% url 'schedules' %}"><button>BECOME A MEMBER</button></a>
+    
+</div>
+
+<div class="presentation">
+    <h2>OUR <span id="program">CLASSES</span></h2>
+    <p id="txt">Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p><br><br>
+    
+</div>
+
+<section>
+    <section class="section1">
+        <div class="first">
+            <button id="btn1" onclick="showInfo('info1')">
+                <img src="{% static 'gymapp/image/tabs-first-icon.png' %}" alt id="img1">First Training class
+            </button>
+        </div><br><br>
+        <div class="second">
+            <button id="btn2" onclick="showInfo('info2')">
+                <img src="{% static 'gymapp/image/tabs-first-icon.png' %}" alt id="img2"> Second Training class
+            </button>
+        </div><br><br>
+        <div class="third">
+            <button id="btn3" onclick="showInfo('info3')">
+                <img src="{% static 'gymapp/image/tabs-first-icon.png' %}" alt id="img3"> Third Training class
+            </button>
+        </div><br><br>
+        <div class="fourth">
+            <button id="btn4" onclick="showInfo('info4')">
+                <img src="{% static 'gymapp/image/tabs-first-icon.png' %}" alt id="img4"> Fourth Training class
+            </button>
+        </div><br><br>
+        <div>
+            <a href="{% url 'schedules' %}">
+                <button id="view">View All Schedules</button>
+            </a>
+        </div>
+    </section>
+    
+    <section class="section2">
+        <div id="info1" class="info" style="display: none;">
+            <img src="{% static 'gymapp/image/training-image-01.jpg' %}" alt id="sary">
+            <h3>First Training Class</h3>
+            <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p><br><br>
+            <a href="{% url 'schedules' %}">
+                <button id="sub">VIEW SCHEDULES</button>
+            </a>
+        </div>
+        <div id="info2" class="info" style="display: none;">
+            <img src="{% static 'gymapp/image/training-image-02.jpg' %}" alt id="sary">
+            <h3>Second Training Class</h3>
+            <p>Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a velit. Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p><br><br>
+            <a href="{% url 'schedules' %}">
+                <button id="sub">VIEW SCHEDULES</button>
+            </a>
+        </div>
+        <div id="info3" class="info" style="display: none;">
+            <img src="{% static 'gymapp/image/training-image-03.jpg' %}" alt id="sary">
+            <h3>Third Training Class</h3>
+            <p>Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.</p><br><br>
+            <a href="{% url 'schedules' %}">
+                <button id="sub">VIEW SCHEDULES</button>
+            </a>
+        </div>
+        <div id="info4" class="info" style="display: none;">
+            <img src="{% static 'gymapp/image/training-image-04.jpg' %}" alt id="sary">
+            <h3>Fourth Training Class</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget venenatis ipsum commodo et.</p><br><br>
+            <a href="{% url 'schedules' %}">
+                <button id="sub">VIEW SCHEDULES</button>
+            </a>
+        </div>
+    </section>
+</section>
+<script>
+    function showInfo(id) {
+        // Hide all info sections
+        document.querySelectorAll('.info').forEach(function(element) {
+            element.style.display = 'none';
+        });
+        // Show the selected info section
+        document.getElementById(id).style.display = 'block';
+    }
+     // Show the first info section by default
+        document.addEventListener("DOMContentLoaded", function() {
+            showInfo('info1');
+});
+</script>
+
+{% endblock %}

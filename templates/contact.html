@@ -1,0 +1,63 @@
+{% extends 'layouts/master.html' %}
+{% load static %}
+
+{% block title %}
+    Contact Us
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="pub2" id="publicite">
+        <h1 id="titre11">Work harder, get stronger</h1><br><br>
+        <h1 id="titre200">Easy with our <span id="gym">gym</span></h1>
+
+        
+        <a href="{% url 'schedules' %}"><button>BECOME A MEMBER</button></a>
+        
+    </div>
+
+    <div class="presentation">
+        <h2>OUR <span id="program">LOCALISATION</span></h2>
+        <p id="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nihil aut? Impedit, ipsum veritatis, accusantium consequuntur commodi, illo esse inventore magnam rem alias atque necessitatibus sed architecto velit voluptate animi.</p><br><br>
+        <img src="{% static 'gymapp/image/line-dec.png' %}" alt="img" id="separate">
+    </div><br><br>
+
+    <section class="local_contact">
+       
+        <div class="localisation">
+            <!-- Affichage de l'emplacement (ajoutez des données ici si nécessaire) -->
+            <iframe src="https://www.google.com/maps/embed?pb={{ program.map_embed_code }}" width="650" height="555" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="inscription">
+            <form method="post" action="{% url 'contact' %}" class="userInfo"   onsubmit="return stayInPlace()">
+                {% csrf_token %}
+                <input type="text" placeholder="Your Name" id="name" name="name">
+                <input type="email" placeholder="Your Email" id="mail" name="email"><br><br>
+                <input type="text" placeholder="Subject" id="subject" name="subject"><br>
+                <textarea placeholder="Your message" name="message"></textarea><br>
+                <button type="submit" id="btnSend">SEND MESSAGE</button>
+                
+            
+             <!-- Affichage des messages d'alerte -->
+             {% if messages %}
+                <div class="message">
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags %}{{ message.tags }}{% endif %}">
+            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            </form>
+        </div>
+    </section>
+    
+    <div id="alertSection"></div> <!-- Ancre pour rester en place -->
+</div>
+
+
+
+
+{% endblock content %}
+
+

@@ -1,0 +1,286 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Styles pour la section publicitaire */
+.pub {
+    animation: slideShow 20s infinite;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -42px;
+    margin-left: -20px;
+    width: 1280px;
+
+}
+
+
+
+/* Styles pour le main */
+main {
+    
+    background-size: cover;
+    padding: 40px;
+    color: #333;
+    margin-left: -10px;
+    width: 1200px;
+    margin-left: -20px;
+    height: 700px;
+    margin-top: 20px;
+}
+
+#titre1111{
+    color: white;
+    margin-left: 420px;
+    padding-top: 150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 
+    
+}
+
+#titre222{
+    color:white;
+    font-size: 84px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+  margin-bottom: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 50px;
+}
+
+#cls{
+    color:white
+}
+#manasaraka{
+  width: 70px;
+  height: 100px;
+  margin-left: 570px;
+  margin-top: -30px;
+  height: 20px;
+  
+    
+
+}
+
+.click #btn {
+    background: transparent;
+    margin-left: 100px;
+}
+.click #btn1 {
+
+    background:transparent;
+    color: #ddd;
+    margin-left: -100px;
+    margin-top: -30px;
+}
+.click #btn2 {
+    margin-left: -80px;
+    background:transparent;
+    color:#ddd
+    
+}
+.click #btn3 {
+    margin-left: -100px;
+    background: transparent;
+    color: #ddd;
+}
+.click #btn4 {
+    margin-left: -200px;
+    background: transparent;
+    color: #ddd;
+}
+
+/* Styles des boutons */
+button {
+    background-color: #28a745; /* Couleur verte */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838; /* Couleur verte plus foncée au survol */
+}
+
+/* Styles de tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    height: 300px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: #f2f2f2;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #333; /* Effet de survol pour les lignes de tableau */
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-footer {
+    background-color: #f1f1f1;
+}
+
+#registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.btn-submit {
+    width: 50%;
+    padding: 10px;
+    background-color: #FA8072;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 0px;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+   
+}
+
+
+.messages {
+    margin-top: 15px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.messages li {
+    background-color: #ffeeba;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+/* Styles pour le footer */
+.footer {
+    background-image: url("{% static 'gymapp/image/cta-bg.jpg' %}");
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    margin-left: -50px;
+}
+#btn{
+    background-color: #FA8072;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 575px;
+    width: 155px;
+    height: 50px;
+    border: none;
+}
+#md{
+    margin-left: -20px;
+    background-color: transparent;
+
+}
+
+
+#tue{
+    margin-left: 0px;
+    background-color: transparent;
+}
+#wd{
+    margin-left: 20px;
+    background-color: transparent;
+}
+#th{
+    margin-left: 30px;
+    background-color: transparent;
+}
+#frd{
+    margin-left: 40px;
+    background-color: transparent;
+}
+#frd:hover {
+    color: #FA8072;
+}
+#md:hover{
+    color: #FA8072;
+}
+#tue:hover{
+    color: #FA8072;
+}
+#wd:hover{
+    color: #FA8072;
+}
+#th:hover{
+    color: #FA8072;
+}
+

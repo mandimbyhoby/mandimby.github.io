@@ -1,0 +1,340 @@
+{% extends 'layouts/master.html' %}
+{% load static %}
+{% block title %}
+SCHEDULES
+{% endblock %}
+
+{% block content %}
+<div class="pub" id="publicite">
+    <h1 id="titre1111">Work harder, get stronger</h1><br><br>
+    <h1 id="titre222">Easy with our <span id="gym">gym</span></h1>
+    
+    <a href="{% url 'schedules' %}"><button>BECOME A MEMBER</button></a>
+    
+</div><br><br>
+
+<main>
+    <div class="presentation">
+        <h2><span id="cls">CLASSES <span id="program">SCHEDULES</span></h2>
+        <p id="txt">Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p><br><br>
+        <img src="{% static 'gymapp/image/line-dec.png' %}" alt="img" id="manasaraka">
+    </div><br><br><br>
+
+    <section class="entrainement">
+        <!-- Buttons for each day -->
+        <div class="click">
+            <button id="md" onclick="showInfo('Monday')">Monday</button> 
+            <button id="tue" onclick="showInfo('Tuesday')">Tuesday</button>
+            <button id="wd" onclick="showInfo('Wednesday')">Wednesday</button>
+            <button id="th" onclick="showInfo('Thursday')">Thursday</button>
+            <button id="frd" onclick="showInfo('Friday')">Friday</button>
+        </div>
+        <br>
+
+        <div id="info1"  class="info" style="display: none;">
+            <table>
+                <tbody>
+                    <tr onclick="setProgramId('1')">
+                        <td>Fitness Class</td>
+                        <td></td>
+                        <td>2:00PM - 3:30PM</td>
+                        <td>William G. Stewart</td>
+                    </tr>
+                    <tr>
+                        <td>Muscle Training</td>
+                        <td></td>
+                        <td></td>
+                        <td>Paul D. Newman</td>
+                    </tr>
+                    <tr onclick="setProgramId('2')">
+                        <td>Body Building</td>
+                        <td>10:00AM - 11:30AM</td>
+                        <td></td>
+                        <td>Boyd C. Harris</td>
+                    </tr>
+                    <tr>
+                        <td>Yoga Training Class</td>
+                        <td></td>
+                        <td></td>
+                        <td>Hector T. Daigle</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced Training</td>
+                        <td></td>
+                        <td></td>
+                        <td>Bret D. Bowers</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <div id="info2"  class="info" style="display: none;">
+            <table>
+                <tbody>
+                    <tr onclick="setProgramId('3')">
+                        <td>Fitness Class</td>
+                        <td>10:00AM - 11:30AM</td>
+                        <td></td>
+                        <td>William G. Stewart</td>
+                    </tr>
+                    <tr>
+                        <td>Muscle Training</td>
+                        <td></td>
+                        <td></td>
+                        <td>Paul D. Newman</td>
+                    </tr>
+                    <tr onclick="setProgramId('4')">
+                        <td>Body Building</td>
+                        <td></td>
+                        <td>2:00PM - 3:30PM</td>
+                        <td>Boyd C. Harris</td>
+                    </tr>
+                    <tr>
+                        <td>Yoga Training Class</td>
+                        <td></td>
+                        <td></td>
+                        <td>Hector T. Daigle</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced Training</td>
+                        <td></td>
+                        <td></td>
+                        <td>Bret D. Bowers</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <div id="info3"  class="info" style="display: none;">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Fitness Class</td>
+                        <td></td>
+                        <td></td>
+                        <td>William G. Stewart</td>
+                    </tr>
+                    <tr>
+                        <td>Muscle Training</td>
+                        <td></td>
+                        <td></td>
+                        <td>Paul D. Newman</td>
+                    </tr>
+                    <tr>
+                        <td>Body Building</td>
+                        <td></td>
+                        <td></td>
+                        <td>Boyd C. Harris</td>
+                    </tr>
+                    <tr onclick="setProgramId('5')">
+                        <td>Yoga Training Class</td>
+                        <td>10:00AM - 11:30AM</td>
+                        <td></td>
+                        <td>Hector T. Daigle</td>
+                    </tr>
+                    <tr onclick="setProgramId('6')">
+                        <td>Advanced Training</td>
+                        <td></td>
+                        <td>2:00PM - 3:30PM</td>
+                        <td>Bret D. Bowers</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <div id="info4"  class="info" style="display: none;">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Fitness Class</td>
+                        <td></td>
+                        <td></td>
+                        <td>William G. Stewart</td>
+                    </tr>
+                    <tr onclick="setProgramId('7')">
+                        <td>Muscle Training</td>
+                        <td></td>
+                        <td>2:00PM - 3:30PM</td>
+                        <td>Paul D. Newman</td>
+                    </tr>
+                    <tr>
+                        <td>Body Building</td>
+                        <td></td>
+                        <td></td>
+                        <td>Boyd C. Harris</td>
+                    </tr>
+                    <tr>
+                        <td>Yoga Training Class</td>
+                        <td></td>
+                        <td></td>
+                        <td>Hector T. Daigle</td>
+                    </tr>
+                    <tr onclick="setProgramId('8')">
+                        <td>Advanced Training</td>
+                        <td>10:00AM - 11:30AM</td>
+                        <td></td>
+                        <td>Bret D. Bowers</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <div id="info5"  class="info" style="display: none;">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Fitness Class</td>
+                        <td></td>
+                        <td></td>
+                        <td>William G. Stewart</td>
+                    </tr>
+                    <tr  onclick="setProgramId('9')">
+                        <td>Muscle Training</td>
+                        <td>10:00AM - 11:30AM</td>
+                        <td></td>
+                        <td>Paul D. Newman</td>
+                    </tr>
+                    <tr>
+                        <td>Body Building</td>
+                        <td></td>
+                        <td></td>
+                        <td>Boyd C. Harris</td>
+                    </tr>
+                    <tr  onclick="setProgramId('10')">
+                        <td>Yoga Training Class</td>
+                        <td></td>
+                        <td>10:00AM - 11:30AM</td>
+                        <td>Hector T. Daigle</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced Training</td>
+                        <td></td>
+                        <td></td>
+                        <td>Bret D. Bowers</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+
+
+    </section>
+</main><br><br>
+    <!-- Registration form -->
+    <div id="registration-form">
+        <h2>Registration</h2>
+        <form id="user-form" action="{% url 'register_user' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" id="program-id" name="program_id" value="">
+            
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first_name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last_name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+
+             <!-- Sélection du cours -->
+             <select name="program_id" required>
+                {% for schedule in schedules %}
+                    <option value="{{ schedule.id }}">
+                        {{ schedule.name }} - {{ schedule.day }} {{ schedule.start_time }} - {{ schedule.end_time }}
+                    </option>
+                {% endfor %}
+            </select>
+            
+            
+            <div>
+                <input type="checkbox" id="payment-day" name="payment_day">
+                <label for="payment-day">Will pay on the training day</label>
+            </div>
+
+             <!-- Stripe Card Element -->
+            <label for="card-element">Card Details:</label>
+            <div id="card-element"><!-- Un élément Stripe sera inséré ici --></div>
+            <div id="card-errors" role="alert"></div>
+
+            <button type="submit" class="btn-submit">Proceed to Payment</button>
+
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li {% if message.tags %}class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        
+        </form>
+
+    <div id="alertSection"></div> <!-- Ancre pour rester en place -->  
+    </div>
+
+
+<!-- JavaScript -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    var stripe = Stripe('{{ STRIPE_TEST_PUBLIC_KEY }}');
+    var elements = stripe.elements();
+    var cardElement = elements.create('card');
+    cardElement.mount('#card-element');
+
+    var form = document.getElementById('user-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        stripe.createToken(cardElement).then(function(result) {
+            if (result.error) {
+                // Afficher l'erreur à l'utilisateur
+                document.getElementById('card-errors').textContent = result.error.message;
+            } else {
+                // Envoyer le token au serveur avec le reste du formulaire
+                var tokenInput = document.createElement('input');
+                tokenInput.setAttribute('type', 'hidden');
+                tokenInput.setAttribute('name', 'stripeToken');
+                tokenInput.setAttribute('value', result.token.id);
+                form.appendChild(tokenInput);
+                form.submit();
+            }
+        });
+    });
+</script>
+<script>
+    // Fonction pour afficher les informations du programme sélectionné
+function showInfo(day) {
+    // Masque toutes les sections d'information
+    document.querySelectorAll('.info').forEach(function(element) {
+        element.style.display = 'none';
+    });
+
+    // Affiche la section d'information du jour sélectionné
+    document.getElementById('info' + (day === 'Monday' ? '1' :
+        day === 'Tuesday' ? '2' :
+        day === 'Wednesday' ? '3' :
+        day === 'Thursday' ? '4' :
+        day === 'Friday' ? '5' : '')).style.display = 'block';
+}
+
+// Fonction pour définir l'ID du programme sélectionné
+function setProgramId(programId) {
+    // Met à jour la valeur cachée pour le programme sélectionné
+    document.getElementById('program-id').value = programId;
+
+    // Masque toutes les sections d'information et affiche le formulaire d'inscription
+    document.querySelectorAll('.info').forEach(function(element) {
+        element.style.display = 'none';
+    });
+    document.getElementById('registration-form').style.display = 'block';
+}
+
+// Affiche la section d'information du lundi par défaut
+document.addEventListener("DOMContentLoaded", function() {
+    showInfo('Monday');
+});
+
+</script>
+
+{% endblock content %}
